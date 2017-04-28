@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>API-поиск Google</title>
+	<!-- <script src="jquery-1.11.1.min.js"></script> -->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<section class="main">
+		<div class="block">
+			<!-- Форма поиска -->
+			<img src="theodor-kittelsens.png"/>
+			<form action="http://www.google.com/search" method="get">
+				<!-- Поле поиска HTML5  -->
+				<input type="search" id="search-box" name="q" results="5" placeholder="Поиск..." autocomplete="on" />
+				<input id="search-submit" class="button" type="submit" value="Искать" />
+			</form>
+			<!-- Элемент с резульататми поиска будет выводиться после данного div -->
+			<div id="search-area" style="position:relative;"></div>
+		</div>
+	</section> 
+
+	<!-- Подгружаем API Google AJAX Search и Mootools -->
+	<script type="text/javascript" src="http://www.google.com/jsapi?key=ABQIAAAAFZMHSk5SukmTvhBxZWENGhTQl6pFZu3r5RVYEgNmZnyfNkVr8RTKvUhkKTQiQstWDQbIrv7_cPBOiA"></script>
+	<script type="text/javascript">
+		google.load('mootools','1.2.4');
+		google.load('search','1');
+	</script>
+
+</body>
+</html>
